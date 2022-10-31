@@ -1,4 +1,13 @@
+/* google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&display=swap');
+
+/* variables */
+:root{
+  color-scheme: light dark;
+  --transition: ease-in-out 200ms;
+}
+
+/* resets */
 html{
   scroll-behavior: smooth;
 }
@@ -11,10 +20,25 @@ body{
   margin: 0;
   padding: 0;
   font: 1rem 'PT Sans', sans-serif;
+  line-height: 1.5em;
+}
+
+@media (prefers-color-scheme: light){
+  body{
+    background: white;
+    color: #222;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  body{
+    background: #1c1b22;
+    color: #ddd !important;
+  }
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'PT Serif', serif;
+  font: normal 700 1.8em 'PT Serif', serif;
 }
 
 a:link{
@@ -22,6 +46,7 @@ a:link{
   color: inherit;
 }
 
+/* navbar */
 nav{
   background: rgb(0, 0, 0, .5);
   backdrop-filter: blur(10px);
@@ -47,7 +72,7 @@ nav a{
   color: inherit;
   text-decoration: none;
   padding: 1em;
-  transition: background-color ease-in-out 200ms;
+  transition: background-color var(--transition);
   position: relative;
 }
 
@@ -60,7 +85,7 @@ nav a::before{
   height: 3px;
   background: #ddd;
   transform: scaleX(0);
-  transition: transform ease-in-out 200ms;
+  transition: transform var(--transition);
 }
 
 nav a:hover{
@@ -72,12 +97,20 @@ nav a:hover::before{
 }
 
 .main-section{
-  margin-block: 2em;
-  padding: 1em;
+  padding: 1em 1em 2em 1em;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-section > div:first-of-type{
+  padding-inline: 1em;
 }
 
 .hero{
-  min-height: 80vh;
+  min-height: 100vh;
   color: #ddd;
   position: relative;
   display: flex;
@@ -95,6 +128,7 @@ nav a:hover::before{
 
 .hero__text h1{
   font-size: 2em;
+  color: #ddd;
 }
 
 .hero__image{
@@ -102,21 +136,55 @@ nav a:hover::before{
   flex: 2 1 0;
   background-image: url(../assets/f1-75.jpg);
   background-size: cover;
+  background-position: center;
 }
 
-.main-section{
-  display: flex;
-  flex-direction: column;
+.skills__cards-container{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.skill-card{
+  border-radius: .5em;
+  outline: 1px solid #aaa;
+  font-size: 5vw;
+  padding: 40% 2em;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.skill-card__desc{
+  text-align: left;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  color: #ddd;
+}
+
+.skill-card:hover::after{
+  content: "";
+  position: absolute;
+  background: #2d2d2d;
+  inset: 0;
+}
+
+.contacttt::after{
+  content: "below";
 }
 
 .form-container{
   outline: 1px solid black;
-  width: auto; 
   padding: 1em;
+  align-self: stretch;
 }
 
 .form-container label{
   display: block;
+  padding: .5em 0 1em 0;
 }
 
 .form-container input{
@@ -124,25 +192,33 @@ nav a:hover::before{
   width: 100%;
 }
 
+#submit{
+  margin-top: 2em;
+  cursor: pointer;
+}
+
 footer{
   background: #202021;
   color: #ddd;
   padding: 1em;
+  text-align: center;
 }
 
 .footer-socials{
   text-align: center;
   display: flex;
-}
-
-.footer-socials__links{
-  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.footer-socials__links a{
-  color: inherit;
+.footer-socials a{
+  color: #aaa;
   padding: 1em;
+  transition: color var(--transition);
+}
+
+.footer-socials a:hover{
+  color: #ddd;
 }
 
 @media screen and (min-width: 50em){
@@ -159,6 +235,23 @@ footer{
     max-width: 40ch;
   }
 
+  .main-section{
+    flex-direction: row;
+    max-width: 75vw;
+    margin: auto;
+  }
+
+  .main-section > div{
+    flex: 1 1 0;
+  }
+
+  .skill-card{
+    font-size: 1.5vw;
+  }
+
+  .contacttt::after{
+    content: "on the right";
+  }
   footer{
     display: flex;
     justify-content: space-between;
