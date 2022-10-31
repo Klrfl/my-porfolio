@@ -12,11 +12,11 @@
 </head>
 <body>
   <nav>
-    <div class="logo">LOGO</div>
+    <div class="logo"><a href="#">LOGO</a></div>
     <div class="navlinks-container">
-      <a href="#" class="navlinks">Skills</a>
-      <a href="#" class="navlinks">About</a>
-      <a href="#" class="navlinks"> Contact</a>
+      <a href="#skills" class="navlinks">Skills</a>
+      <a href="#about" class="navlinks">About</a>
+      <a href="#contact" class="navlinks"> Contact</a>
     </div>
   </nav>
   <main>
@@ -30,21 +30,54 @@
     </section>
     <section class="main-section" id="skills">
       <div class="skills__text">
-        <h2>Skills section</h2>
+        <h2>My skillset</h2>
+        <p>Here are some technologies I am comfortable using in my workflow.</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus excepturi reiciendis similique sed magnam illum voluptatum aperiam nemo ratione aliquam tempore quam iure ipsa at corrupti, ipsam enim hic libero!</p>
+        <div class="skulls__cards-container">
+
+        </div>
       </div>
     </section>
-    <section class="main-section" id="about">
-      <h2>About me</h2>
-      <p>I was born in a barn in Indonesia, far from civilization. Just kidding. I am just your regular ol' grade 10 student.</p>
+    <section class="main-section about-section" id="about">
+      <div class="about__text">
+        <h2>About me</h2>
+        <p>I was born in a barn in Indonesia, far from civilization. Just kidding. I am just your regular ol' grade 10 student.</p>
+      </div>
     </section>
-    <section class="main-section" id="contact">
-      <h2>Contact</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur ipsum autem rem aperiam eos tenetur, sed non iure in accusantium distinctio exercitationem earum. Rem molestiae laborum maiores nostrum facilis repudiandae?</p>
+    <section class="main-section contact-section" id="contact">
+     <div class="contact__text" id="contact">
+       <h2>Contact</h2>
+       <p>I am learning PHP.</p>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur ipsum autem rem aperiam eos tenetur, sed non iure in accusantium distinctio exercitationem earum. Rem molestiae laborum maiores nostrum facilis repudiandae?</p>
+     </div>
+      <div class="form-container">
+        <form action="index.php" action="GET">
+          <label for="firstname">First name</label>
+          <input id="firstname" type="text" name="firstname" placeholder="John">
+  
+          <label for="lastname">Last name</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Smith">
+  
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="email@example.com">
+        </form>
+      </div>
     </section>
   </main>
   <footer>
-    <p>Made by <a href="https://github.com/Klrfl">Klrfl</a>, 2022.</p>
+    <div class="footer-text">
+      <p>Made by Klrfl, 2022.</p>
+    </div>
+    <div class="footer-socials">
+      <p>Contact me on...</p>
+      <div class="footer-socials__links">
+        <a href="#"><i class="fa-brands fa-github"></i> Klrfl</a>
+        <a href="#"><i class="fa-brands fa-codepen"></i> Klrfl</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i> Klrfl</a>
+      </div>
+    </div>
   </footer>
+  <!-- fontawesome link -->
+  <script src="https://kit.fontawesome.com/12334b3056.js" crossorigin="anonymous"></script>
 </body>
 </html>
