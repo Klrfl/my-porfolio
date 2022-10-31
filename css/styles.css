@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'PT Serif', serif;
 }
 
+a:link{
+  text-decoration: none;
+  color: inherit;
+}
+
 nav{
   background: rgb(0, 0, 0, .5);
   backdrop-filter: blur(10px);
@@ -67,11 +72,8 @@ nav a:hover::before{
 }
 
 .main-section{
+  margin-block: 2em;
   padding: 1em;
-}
-
-.main-section p{
-  max-width: 75ch;
 }
 
 .hero{
@@ -84,25 +86,42 @@ nav a:hover::before{
 
 .hero__text{
   background: #2d2d3f;
-  z-index: 1;
-  flex: 2 1 0;
-  padding-top: calc(1em + 1em);
+  text-align: center;
+  padding-block: 1em;
   padding-inline: 1em;
+  z-index: 1;
+  flex: 1 1 0;
 }
 
 .hero__text h1{
   font-size: 2em;
 }
 
-.hero__text p{
-  max-width: 40ch;
-}
-
 .hero__image{
   order: -1;
-  flex: 1 1 0;
+  flex: 2 1 0;
   background-image: url(../assets/f1-75.jpg);
   background-size: cover;
+}
+
+.main-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container{
+  outline: 1px solid black;
+  width: auto; 
+  padding: 1em;
+}
+
+.form-container label{
+  display: block;
+}
+
+.form-container input{
+  padding: .5em;
+  width: 100%;
 }
 
 footer{
@@ -111,12 +130,45 @@ footer{
   padding: 1em;
 }
 
+.footer-socials{
+  text-align: center;
+  display: flex;
+}
+
+.footer-socials__links{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-socials__links a{
+  color: inherit;
+  padding: 1em;
+}
+
 @media screen and (min-width: 50em){
   .hero__text{
     padding: 10em 10em 10em 5em;
+    text-align: left;
     position: absolute;
     top: 0;
     bottom: 0;
     clip-path: polygon(100% 0, 50% 100%, 0% 100%, 0 0%);
+  }
+
+  .hero__text p{
+    max-width: 40ch;
+  }
+
+  footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-socials > span{
+    text-align: center;
+  }
+
+  .footer-socials__links{
+    display: inline;
   }
 }
