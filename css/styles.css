@@ -97,9 +97,9 @@ nav a:hover::before{
 }
 
 .main-section{
-  padding: 1em 1em 2em 1em;
+  padding: 1em 1em 10em 1em;
+  background: #1c1b22;
 
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +112,9 @@ nav a:hover::before{
 .hero{
   min-height: 100vh;
   color: #ddd;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: -2;
   display: flex;
   flex-direction: column;
 }
@@ -237,8 +239,8 @@ footer{
 
   .main-section{
     flex-direction: row;
-    max-width: 75vw;
-    margin: auto;
+    /* max-width: 75vw;
+    margin: auto; */
   }
 
   .main-section > div{
