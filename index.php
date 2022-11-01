@@ -6,10 +6,15 @@
   <title>FORM VALIDATION!!</title>
 </head>
 <body>
-  <p>Welcome! I was practicing my PHP.</p>
+  <p>Sorry, I got too lazy to learn PHP. I'll do this later.</p>
+  <!-- <p>Welcome! I was practicing my PHP.</p>
   <p>Your name is:</p>
 
-  <?php echo $_GET["name"]; ?>
-  <p>Is this really your name?</p>
+  <?php
+  $name = $_POST["firstname"];
+  $name = $_POST["lastname"];
+  echo $name;
+  ?>
+  <p>Is this really your name?</p> -->
 </body>
 </html>

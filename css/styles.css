@@ -97,7 +97,7 @@ nav a:hover::before{
 }
 
 .main-section{
-  padding: 1em 1em 10em 1em;
+  padding: 10em 1em;
   background: #1c1b22;
 
   display: flex;
@@ -106,7 +106,7 @@ nav a:hover::before{
 }
 
 .main-section > div:first-of-type{
-  padding-inline: 1em;
+  padding: 1em;
 }
 
 .hero{
@@ -151,36 +151,79 @@ nav a:hover::before{
 .skill-card{
   border-radius: .5em;
   outline: 1px solid #aaa;
-  font-size: 5vw;
+  font-size: 3.5vw;
   padding: 40% 2em;
   aspect-ratio: 1/1;
   overflow: hidden;
+  user-select: none;
+
   position: relative;
   cursor: pointer;
 }
 
+.skill-card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  transition: background-color 200ms ease;
+}
+
+.skill-text{
+  transition: opacity 200ms ease;
+}
+
 .skill-card__desc{
+  font-size: 1rem;
   text-align: left;
   position: absolute;
   inset: 0;
   z-index: 1;
   color: #ddd;
+
+  transform: translateY(100%);
+  transition: transform 200ms ease-out;
+
+  display: grid;
+  place-items: center;
+}
+
+.skill-card ul{
+  padding: 0;
+}
+
+.skill-card:hover .skill-text{
+  opacity: 0;
+}
+
+.skill-card:hover .skill-card__desc{
+  transform: translateY(0);
 }
 
 .skill-card:hover::after{
-  content: "";
-  position: absolute;
-  background: #2d2d2d;
-  inset: 0;
+  background: inherit;
+  transform: translateY(0);
 }
 
+.about-section{
+  background: #d92d21;
+}
+
+.contact-section{
+  background:#1a8db8;
+}
 .contacttt::after{
   content: "below";
 }
 
 .form-container{
+  background: #1c1b22;
   outline: 1px solid black;
   padding: 1em;
+  align-self: stretch;
+}
+
+.contact__text{
   align-self: stretch;
 }
 
@@ -248,7 +291,7 @@ footer{
   }
 
   .skill-card{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   .contacttt::after{
