@@ -20,7 +20,7 @@ body{
   margin: 0;
   padding: 0;
   font: 1rem 'PT Sans', sans-serif;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 @media (prefers-color-scheme: light){
@@ -33,7 +33,7 @@ body{
 @media (prefers-color-scheme: dark){
   body{
     background: #1c1b22;
-    color: #ddd !important;
+    color: #ddd;
   }
 }
 
@@ -96,10 +96,12 @@ nav a:hover::before{
   transform: scaleX(1);
 }
 
+/* main section, hero */
 .main-section{
   padding: 10em 1em;
   background: #1c1b22;
 
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,22 +143,24 @@ nav a:hover::before{
   background-position: center;
 }
 
+/* skills section */
 .skills__cards-container{
   text-align: center;
+  align-self: stretch;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1em;
 }
 
 .skill-card{
   border-radius: .5em;
   outline: 1px solid #aaa;
-  font-size: 3.5vw;
   padding: 40% 2em;
   aspect-ratio: 1/1;
   overflow: hidden;
   user-select: none;
 
+  transition: transform var(--transition);
   position: relative;
   cursor: pointer;
 }
@@ -174,7 +178,7 @@ nav a:hover::before{
 }
 
 .skill-card__desc{
-  font-size: 1rem;
+  font-size: .85rem;
   text-align: left;
   position: absolute;
   inset: 0;
@@ -189,7 +193,13 @@ nav a:hover::before{
 }
 
 .skill-card ul{
-  padding: 0;
+  padding: 1em;
+  list-style: none;
+  text-align: center;
+}
+
+.skill-card:hover{
+  transform: scale(105%);
 }
 
 .skill-card:hover .skill-text{
@@ -205,13 +215,38 @@ nav a:hover::before{
   transform: translateY(0);
 }
 
-.about-section{
-  background: #d92d21;
+.about-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
-.contact-section{
-  background:#1a8db8;
+.about-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 69px;
+  transform: rotateY(180deg);
 }
+
+.about-divider .shape-fill {
+  fill: #d02b1f;
+}
+
+/* about section */
+.about-section{
+  background: #d02b1f;
+}
+
+/* contact section */
+.contact-section{
+  background:#267ee6;
+}
+
 .contacttt::after{
   content: "below";
 }
@@ -221,6 +256,26 @@ nav a:hover::before{
   outline: 1px solid black;
   padding: 1em;
   align-self: stretch;
+}
+
+.contact-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.contact-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 52px;
+}
+
+.contact-divider .shape-fill {
+  fill: #d02b1f;
 }
 
 .contact__text{
@@ -266,6 +321,7 @@ footer{
   color: #ddd;
 }
 
+/* media query */
 @media screen and (min-width: 50em){
   .hero__text{
     padding: 10em 10em 10em 5em;
@@ -288,10 +344,6 @@ footer{
 
   .main-section > div{
     flex: 1 1 0;
-  }
-
-  .skill-card{
-    font-size: 1.2vw;
   }
 
   .contacttt::after{
