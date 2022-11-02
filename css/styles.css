@@ -138,9 +138,13 @@ nav a:hover::before{
 .hero__image{
   order: -1;
   flex: 2 1 0;
-  background-image: url(../assets/f1-75.jpg);
+  /* background-image: url(../assets/f1-75.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+}
+
+.hero__image > img{
+  max-width: 100%;
 }
 
 /* skills section */
