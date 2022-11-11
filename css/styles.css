@@ -1,7 +1,7 @@
 /* variables */
 :root{
   color-scheme: light dark;
-  --transition: ease-in-out 200ms;
+  --transition: ease-out 200ms;
 }
 
 /* resets */
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6{
 
 a:link{
   text-decoration: none;
-  color: inherit;
+  color: #ddd;
 }
 
 /* navbar */
@@ -116,7 +116,7 @@ nav a:hover::before{
 }
 
 .hero__text h1{
-  font-size: 2em;
+  font-size: 1.8rem;
   color: #ddd;
   width: max-content;
   margin: 1em auto;
@@ -197,7 +197,7 @@ nav a:hover::before{
   position: absolute;
   inset: 0;
   transform: translateY(100%);
-  transition: background-color 200ms ease;
+  transition: background-color var(--transition);
 }
 
 .skill-text{
@@ -219,7 +219,7 @@ nav a:hover::before{
   color: #ddd;
 
   transform: translateY(100%);
-  transition: transform 200ms ease-out;
+  transition: transform var(--transition);
 
   display: grid;
   place-items: center;
@@ -273,6 +273,27 @@ nav a:hover::before{
 /* about section */
 .about-section{
   background: #d02b1f;
+}
+
+/* projects section */
+.project__cards-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.project-card{
+  border-radius: .5em;
+  outline: 1px solid #aaa;
+  padding: 2em;
+  user-select: none;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.project-card:hover{
+  transform: scale(1.05);
 }
 
 /* contact section */
@@ -365,6 +386,10 @@ footer{
     clip-path: polygon(100% 0, 50% 100%, 0% 100%, 0 0%);
   }
 
+  .hero__text h1{
+    font-size: 2.2rem;
+    margin: 1em auto;
+  }
   .hero__text p{
     max-width: 40ch;
   }
