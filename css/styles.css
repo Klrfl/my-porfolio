@@ -40,8 +40,7 @@ nav{
   backdrop-filter: blur(10px);
   color: #ddd;
   padding-inline: .5em;
-
-
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,8 +51,32 @@ nav{
   z-index: 100;
 }
 
-nav .navlinks-container{
+.navlinks-container{
+  background: rgb(0, 0, 0, .5);
+  backdrop-filter: blur(.5em);
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform var(--transition);
   display: flex;
+  flex-direction: column;
+}
+
+.navlinks-container.active{
+  transform: translateX(0);
+}
+
+#sidebar-open, #sidebar-close{
+  all: unset;
+  padding: 1em;
+  cursor: pointer;
+}
+
+#sidebar-close{
+  /* margin: 1em; */
+  font-size: 1.5rem;
+  align-self: flex-end;
 }
 
 nav a{
@@ -120,7 +143,7 @@ nav a:hover::before{
 }
 
 .hero__text h1{
-  font-size: 1.8rem;
+  font-size: max(2rem, 6.5vmin);
   color: #ddd;
   width: max-content;
   margin: 1em auto;
@@ -393,6 +416,20 @@ footer{
 
 /* media query */
 @media screen and (min-width: 60em){
+  .navlinks-container{
+    background: transparent;
+    position: relative;
+    flex-direction: row;
+    height: min-content;
+    transform: none;
+  }
+  
+  #sidebar-open, #sidebar-close{
+    position: absolute;
+    display: none;
+    /* visibility: hidden; */
+  }
+  
   .hero__text{
     padding: 10em 10em 10em 5em;
     text-align: left;
@@ -403,7 +440,7 @@ footer{
   }
 
   .hero__text h1{
-    font-size: 2.2rem;
+    /* font-size: 2.2rem; */
     margin: 1em auto;
   }
   .hero__text p{

@@ -16,12 +16,18 @@
 <body>
   <nav>
     <div class="logo"><a href="#">LOGO</a></div>
-    <div class="navlinks-container">
+    <div class="navlinks-container" id="sidebar">
+      <button id="sidebar-close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
       <a href="#skills" class="navlinks">Skills</a>
       <a href="#about" class="navlinks">About</a>
       <a href="#projects" class="navlinks">Projects</a>
       <a href="#contact" class="navlinks"> Contact</a>
     </div>
+    <button id="sidebar-open">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </nav>
   <main>
     <section class="hero">
@@ -194,7 +200,8 @@
     </div>
   </footer>
 
-  <!-- fontawesome link -->
+  <!-- js and fontawesome link -->
+  <script src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/12334b3056.js" crossorigin="anonymous"></script>
 </body>
 </html>
