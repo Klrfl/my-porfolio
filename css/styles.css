@@ -30,6 +30,10 @@ a:link{
   color: #ddd;
 }
 
+img{
+  max-width: 100%;
+}
+
 /* navbar */
 nav{
   background: rgb(0, 0, 0, .5);
@@ -167,11 +171,15 @@ nav a:hover::before{
 }
 
 /* skills section */
+.skills-section{
+  flex-direction: column !important;
+}
+
 .skills__cards-container{
   text-align: center;
   align-self: stretch;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1em;
 }
 
@@ -276,6 +284,10 @@ nav a:hover::before{
 }
 
 /* projects section */
+.projects-section{
+  flex-direction: column;
+}
+
 .project__cards-container{
   display: flex;
   justify-content: center;
@@ -284,12 +296,16 @@ nav a:hover::before{
 }
 
 .project-card{
-  border-radius: .5em;
   outline: 1px solid #aaa;
-  padding: 2em;
+  border-radius: .5em;
+  max-width: 105ch;
   user-select: none;
   cursor: pointer;
   transition: transform var(--transition);
+}
+
+.project-card p{
+  padding: 1em 2em;
 }
 
 .project-card:hover{
@@ -376,7 +392,7 @@ footer{
 }
 
 /* media query */
-@media screen and (min-width: 45em){
+@media screen and (min-width: 60em){
   .hero__text{
     padding: 10em 10em 10em 5em;
     text-align: left;
