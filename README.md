@@ -10,7 +10,7 @@ I wanted it to first of all showcase my skills in HTML and CSS so far, and secon
 I made it with three lagnuages:
 - HTML,
 - CSS, and
--  PHP.
+-  PHP (kind of).
 At first, I wanted to use SASS, but I figured that that's too complex to set up and bulky for a static site like this. For the icons, I used [fontawesome](ttps://fontawesome.com) by making a kit and copy-and-pasting the `<script>` tag into the very bottom of my `<body>` element. I also made a PHP file to practice form validation. It does nothing at the moment..
 
 Hopefully you learnt something new from my site. Cheers :)
