@@ -1,3 +1,6 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Source+Code+Pro&display=swap');
+
 /* variables */
 :root{
   color-scheme: light dark;
@@ -22,7 +25,9 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6{
-  font: normal 700 1.8em 'Source Code Pro', serif;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-style: normal;
 }
 
 a:link{
@@ -54,13 +59,16 @@ nav{
 .navlinks-container{
   background: rgb(0, 0, 0, .5);
   backdrop-filter: blur(.5em);
+  
   position: absolute;
-  inset: 0;
   height: 100vh;
+  inset: 0;
   transform: translateX(100%);
   transition: transform var(--transition);
+  
   display: flex;
   flex-direction: column;
+  text-align: right;
 }
 
 .navlinks-container.active{
@@ -69,25 +77,29 @@ nav{
 
 #sidebar-open, #sidebar-close{
   all: unset;
+  box-sizing: border-box;
   padding: 1em;
   cursor: pointer;
 }
 
 #sidebar-close{
-  /* margin: 1em; */
-  font-size: 1.5rem;
-  align-self: flex-end;
+  padding: 1em 1.5em;
 }
 
-nav a{
+#sidebar-close i{
+  transform: scale(1.5);
+}
+
+.navlinks{
   color: inherit;
   text-decoration: none;
   padding: 1em;
+  font-size: 1.2rem;
   transition: background-color var(--transition);
   position: relative;
 }
 
-nav a::before{
+.navlinks::before{
   content: '';
   position: absolute;
   bottom: 0;
@@ -99,7 +111,7 @@ nav a::before{
   transition: transform var(--transition);
 }
 
-nav a:hover{
+.navlinks:hover, .navlinks:focus{
   background: rgb(100, 100, 122, .8);
 }
 
@@ -143,7 +155,7 @@ nav a:hover::before{
 }
 
 .hero__text h1{
-  font-size: max(2rem, 6.5vmin);
+  font-size: min(2rem, 8vmin);
   color: #ddd;
   width: max-content;
   margin: 1em auto;
@@ -154,6 +166,7 @@ nav a:hover::before{
   content: '';
   position: absolute;
   inset: 0;
+  height: min(2rem, 8vmin);
 }
 
 .hero__text h1::before{
@@ -194,9 +207,6 @@ nav a:hover::before{
 }
 
 /* skills section */
-.skills-section{
-  flex-direction: column !important;
-}
 
 .skills__cards-container{
   text-align: center;
@@ -311,28 +321,47 @@ nav a:hover::before{
   flex-direction: column;
 }
 
-.project__cards-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
+.swiper{
+  /* outline: 1px solid red; */
+  padding: .5em;
+  width: 100%;
+  height: min-content;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+  background: rgb(0, 0, 0, .8);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  color: #ddd;
 }
 
 .project-card{
-  outline: 1px solid #aaa;
   border-radius: .5em;
-  max-width: 105ch;
+  width: inherit;
   user-select: none;
   cursor: pointer;
+  overflow: hidden;
   transition: transform var(--transition);
+
+  display: flex;
+  flex-direction: column;
 }
+
+.project-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-text{background: #444;}
 
 .project-card p{
+  text-align: center;
   padding: 1em 2em;
-}
-
-.project-card:hover{
-  transform: scale(1.05);
 }
 
 /* contact section */
@@ -416,6 +445,9 @@ footer{
 
 /* media query */
 @media screen and (min-width: 60em){
+  .navlinks{
+    font-size: inherit;
+  }
   .navlinks-container{
     background: transparent;
     position: relative;
@@ -440,7 +472,6 @@ footer{
   }
 
   .hero__text h1{
-    /* font-size: 2.2rem; */
     margin: 1em auto;
   }
   .hero__text p{
@@ -449,13 +480,16 @@ footer{
 
   .main-section{
     padding-inline: 5em;
-    flex-direction: row;
   }
 
-  .main-section > div{
+  .contact-section > div{
     flex: 1 1 0;
   }
 
+  .contact-section{
+    flex-direction: row;
+  }
+  
   .contacttt::after{
     content: "on the right";
   }

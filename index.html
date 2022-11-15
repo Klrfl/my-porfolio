@@ -7,18 +7,22 @@
   <meta author="Efraim">
   <title>Efraim's portfolio :)</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Source+Code+Pro&display=swap" rel="stylesheet">   
   <!-- css link -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- swiper.js cdn link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </head>
 <body>
   <nav>
-    <div class="logo"><a href="#">LOGO</a></div>
+    <div class="logo">
+      <a href="#">LOGO</a>
+    </div>
     <div class="navlinks-container" id="sidebar">
       <button id="sidebar-close">
-        <i class="fa-solid fa-circle-xmark"></i>
+        <i class="fa-regular fa-circle-xmark"></i>
       </button>
       <a href="#skills" class="navlinks">Skills</a>
       <a href="#about" class="navlinks">About</a>
@@ -115,6 +119,11 @@
             </ul>
           </div>
         </div>
+        <div class="skill-card">
+          <span class="skill-text"><i class="fa-brands fa-php"></i> PHP</span>
+          <div class="skill-card__desc">still learning :)</div>
+        
+        </div>
       </div>
       <div class="about-divider">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -137,24 +146,46 @@
         <p>These are some of the projects I have worked on in the past.</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, deleniti? Amet, repellat eaque, quod ipsum modi, aliquid temporibus iusto obcaecati dolor vitae impedit vero accusantium ipsa tempora consequuntur itaque voluptatem?</p>
       </div>
-      <div class="project__cards-container">
-        <div class="project-card">
-          <a href="https://github.com/Klrfl/Sebastian-Sidebar" target="_blank">
-            <img src="assets/Sebastian Sidebar.png" alt="Sebsatian Sidebar screenshot.">
-          </a>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, quos.</p>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-card">
+              <a href="https://github.com/Klrfl/Sebastian">
+                <img src="assets/Sebastian.png" alt="my first site, sebastian.">
+              </a>
+              <div class="project-text">
+                <p>This is my first ever static site, made when I barely knew about CSS.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <a href="https://github.com/Klrfl/Sebastian-Sidebar" target="_blank">
+                <img src="assets/Sebastian Sidebar.png" alt="Sebsatian Sidebar screenshot.">
+              </a>
+              <div class="project-text"><p>This is an improved version of my previous static site, Sebastian.</p></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <a href="https://github.com/Klrfl/suwit-jawa" target="_blank">
+                <img src="assets/Suwit Jawa by Klrfl.png" alt="my suwit jawa project screenshot.">
+              </a>
+              <div class="project-text"><p>This is a Suwit Jawa game made by me, made with JS.</p></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <a href="http://porto.lupy.my.id">
+                <img src="assets/X PPLG Portofolio Landing Page.png" alt="PPLG landing page.">
+              </a>
+              <div class="project-text"><p>In this landing page, I designed the grid layout of the names, previously using Flex.</p></div>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <a href="https://github.com/Klrfl/suwit-jawa" target="_blank">
-            <img src="assets/Suwit Jawa by Klrfl.png" alt="my suwit jawa project screenshot.">
-          </a>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, quos.</p></div>
-        <div class="project-card">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, quos.</p>
-        </div>
-        <div class="project-card">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, quos.</p>
-        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <div class="contact-divider">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
