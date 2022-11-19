@@ -1,4 +1,5 @@
 // sidebar
+let body = document.body;
 let sidebar = document.getElementById("sidebar");
 let sidebarOpen = document.getElementById("sidebar-open");
 let sidebarClose = document.getElementById("sidebar-close");
@@ -6,10 +7,12 @@ let sidebarLinks = document.querySelectorAll(".navlinks");
 
 sidebarOpen.addEventListener('click', ()=>{
   sidebar.classList.toggle("active");
+  body.classList.toggle("active");
 })
 
 sidebarClose.addEventListener('click', ()=>{
-  sidebar.classList.remove("active");
+  sidebar.classList.toggle("active");
+  body.classList.toggle("active");
 });
 
 for(let i = 0; i < sidebarLinks.length; i++){
