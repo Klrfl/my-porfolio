@@ -1,238 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This is Efraim, A.K.A. Klrfl's portfolio website.">
-  <meta author="Efraim">
-  <title>Efraim's portfolio :)</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is Efraim, A.K.A. Klrfl's portfolio website."
+    />
+    <meta author="Efraim" />
+    <title>Efraim's portfolio :)</title>
 
-  <!-- css link -->
-  <link rel="stylesheet" href="css/styles.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- swiper.js cdn link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-</head>
-<body>
-  <nav>
-    <div class="logo">
-      <a href="#"><i class="fa-solid fa-k"></i></a>
-    </div>
-    <div class="navlinks-container" id="sidebar">
-      <button class="nav-btn" id="sidebar-close">
-        <i class="fa-regular fa-circle-xmark"></i>
+    <!-- swiper.js cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#"><i class="fa-solid fa-k"></i></a>
+      </div>
+      <div class="navlinks-container" id="sidebar">
+        <button class="nav-btn" id="sidebar-close">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </button>
+        <a href="#skills" class="navlinks">Skills</a>
+        <a href="#about" class="navlinks">About</a>
+        <a href="#projects" class="navlinks">Projects</a>
+        <a href="#contact" class="navlinks"> Contact</a>
+      </div>
+      <button class="nav-btn" id="sidebar-open">
+        <i class="fa-solid fa-bars"></i>
       </button>
-      <a href="#skills" class="navlinks">Skills</a>
-      <a href="#about" class="navlinks">About</a>
-      <a href="#projects" class="navlinks">Projects</a>
-      <a href="#contact" class="navlinks"> Contact</a>
-    </div>
-    <button class="nav-btn" id="sidebar-open">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </nav>
-  <main>
-    <section class="hero">
-      <div class="hero__text">
-        <h1>Hello, I'm Efraim.</h1>
-        <p>I like making web experiences full of joy and meaning, or something idk lmao.</p>
-      </div>
-      <div class="hero__image">
-        <!-- <img src="../assets/f1-75.jpg" alt=""> -->
-      </div>
-    </section>
-    
-    <section class="main-section skills-section" id="skills">
-      <div class="skills__text">
-        <h2>My skillset</h2>
-        <!-- <p>Here are some technologies I have learned over the years.</p> -->
-      </div>
-      
-      <div class="skills__cards-container">
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-html5"></i> HTML</span>
-          <div class="skill-card__desc">
-            <ul>
-              <li>Best practices</li>
-              <li>Accessibility with semantic tags</li>
-              <li>Basic form validation</li>
-              <li>Browser DevTools</li>
-            </ul>
+    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero__text">
+          <h1>Hello, I'm Efraim.</h1>
+          <p>
+            I like making web experiences full of joy and meaning, or something
+            idk lmao.
+          </p>
+        </div>
+        <div class="hero__image">
+          <!-- <img src="../assets/f1-75.jpg" alt=""> -->
+        </div>
+      </section>
+
+      <section class="main-section skills-section" id="skills">
+        <div class="skills__text">
+          <h2>My skillset</h2>
+          <!-- <p>Here are some technologies I have learned over the years.</p> -->
+        </div>
+
+        <div class="skills__cards-container">
+          <div class="skill-card">
+            <span class="skill-text"
+              ><i class="fa-brands fa-html5"></i> HTML</span
+            >
+            <div class="skill-card__desc">
+              <ul>
+                <li>Best practices</li>
+                <li>Accessibility with semantic tags</li>
+                <li>Basic form validation</li>
+                <li>Browser DevTools</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-text"
+              ><i class="fa-brands fa-css3"></i> CSS</span
+            >
+            <div class="skill-card__desc">
+              <ul>
+                <li>Mobile first design</li>
+                <li>Responsive design</li>
+                <li>Flexbox</li>
+                <li>Grid</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-text"><i class="fa-brands fa-js"></i> JS</span>
+            <div class="skill-card__desc">
+              <ul>
+                <li></li>
+                <li>DOM manipulation</li>
+                <li>still learning :)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-text"
+              ><i class="fa-brands fa-sass"></i> SASS</span
+            >
+            <div class="skill-card__desc">
+              <ul>
+                <li>Modular stylesheets</li>
+                <li>Use of mixins</li>
+                <li>Conditionals and loops</li>
+                <li>Clean and mantainable code</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-text"
+              ><i class="fa-brands fa-python"></i> Python</span
+            >
+            <div class="skill-card__desc">Still learning :)</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-text"><i class="fa-brands fa-git"></i> Git</span>
+            <div class="skill-card__desc">
+              <ul>
+                <li>Branching</li>
+                <li>Merging branches</li>
+                <li>Cloning (stealing) other people's repo</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-text"
+              ><i class="fa-brands fa-github"></i> Github</span
+            >
+            <div class="skill-card__desc">
+              <ul>
+                <li>Collaboration with forking and cloning</li>
+                <li>Managing pull requests</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-text"><i class="fa-brands fa-php"></i> PHP</span>
+            <div class="skill-card__desc">still learning :)</div>
           </div>
         </div>
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-css3"></i> CSS</span>
-          <div class="skill-card__desc">
-            <ul>
-              <li>Mobile first design</li>
-              <li>Responsive design</li>
-              <li>Flexbox</li>
-              <li>Grid</li>
-            </ul>
-          </div>
+        <div class="about-divider">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
         </div>
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-js"></i> JS</span>
-          <div class="skill-card__desc">
-            <ul>
-              <li></li>
-              <li>DOM manipulation</li>
-              <li>still learning :)</li>
-            </ul>
-          </div>
+      </section>
+
+      <section class="main-section about-section" id="about">
+        <div class="about__text">
+          <h2>About me</h2>
+          <p>
+            I was born in a barn in rural Indonesia to a family stricken by
+            poverty, far from civilization, light or even electricity. My
+            parents struggled to make ends meet every day.
+          </p>
+          <p>
+            Just kidding. I am just your regular nerdy 10th grade student based
+            in West Java, who is passionate about web development. I first
+            discovered the world of software engineering when I was in 9th
+            grade, where I made a hello world program with Python. Then, I
+            learnt HTML, CSS and some very basic JS and built my first
+            <a href="https://github.com/Klrfl/Sebastian-Sidebar"
+              >static website</a
+            >. Since then, I learnt more tools such as SASS, Git and Github.
+          </p>
         </div>
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-sass"></i> SASS</span>
-          <div class="skill-card__desc">
-            <ul>
-              <li>Modular stylesheets</li>
-              <li>Use of mixins</li>
-              <li>Conditionals and loops</li>
-              <li>Clean and mantainable code</li>
-            </ul>
-          </div>
+      </section>
+
+      <section class="main-section projects-section" id="projects">
+        <div class="projects__text">
+          <h2>Projects i've worked on</h2>
+          <p>These are some of the projects I have worked on in the past.</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias,
+            deleniti? Amet, repellat eaque, quod ipsum modi, aliquid temporibus
+            iusto obcaecati dolor vitae impedit vero accusantium ipsa tempora
+            consequuntur itaque voluptatem?
+          </p>
         </div>
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-python"></i> Python</span>
-          <div class="skill-card__desc">
-            Still learning :)
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-git"></i> Git</span>
-          <div class="skill-card__desc">
-            <ul>
-              <li>Branching</li>
-              <li>Merging branches</li>
-              <li>Cloning (stealing) other people's repo</li>
-            </ul>
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-github"></i> Github</span>
-          <div class="skill-card__desc">
-            <ul>
-              <li>Collaboration with forking and cloning</li>
-              <li>Managing pull requests</li>
-            </ul>
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-text"><i class="fa-brands fa-php"></i> PHP</span>
-          <div class="skill-card__desc">still learning :)</div>
-        
-        </div>
-      </div>
-      <div class="about-divider">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-        </svg>
-    </div>
-    </section>
-    
-    <section class="main-section about-section" id="about">
-      <div class="about__text">
-        <h2>About me</h2>
-        <p>I was born in a barn in rural Indonesia to a family stricken by poverty, far from civilization, light or even electricity. My parents struggled to make ends meet every day.</p>
-        <p>Just kidding. I am just your regular nerdy 10th grade student based in West Java, who is passionate about web development. I first discovered the world of software engineering when I was in 9th grade, where I made a hello world program with Python. Then, I learnt HTML, CSS and some very basic JS and built my first <a href="https://github.com/Klrfl/Sebastian-Sidebar">static website</a>. Since then, I learnt more tools such as SASS, Git and Github.</p>
-      </div>
-    </section>
-    
-    <section class="main-section projects-section" id="projects">
-      <div class="projects__text">
-        <h2>Projects i've worked on</h2>
-        <p>These are some of the projects I have worked on in the past.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, deleniti? Amet, repellat eaque, quod ipsum modi, aliquid temporibus iusto obcaecati dolor vitae impedit vero accusantium ipsa tempora consequuntur itaque voluptatem?</p>
-      </div>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="project-card">
-              <a href="https://github.com/Klrfl/Sebastian">
-                <img src="assets/Sebastian.png" alt="my first site, sebastian.">
-              </a>
-              <div class="project-text">
-                <p>This is my first ever static site, made when I barely knew about CSS.</p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="project-card">
+                <a href="https://github.com/Klrfl/Sebastian">
+                  <img
+                    src="assets/Sebastian.png"
+                    alt="my first site, sebastian."
+                  />
+                </a>
+                <div class="project-text">
+                  <p>
+                    This is my first ever static site, made when I barely knew
+                    about CSS.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-card">
+                <a
+                  href="https://github.com/Klrfl/Sebastian-Sidebar"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/Sebastian Sidebar.png"
+                    alt="Sebsatian Sidebar screenshot."
+                  />
+                </a>
+                <div class="project-text">
+                  <p>
+                    This is an improved version of my previous static site,
+                    Sebastian.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-card">
+                <a href="https://github.com/Klrfl/suwit-jawa" target="_blank">
+                  <img
+                    src="assets/Suwit Jawa by Klrfl.png"
+                    alt="my suwit jawa project screenshot."
+                  />
+                </a>
+                <div class="project-text">
+                  <p>This is a Suwit Jawa game made by me, made with JS.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-card">
+                <a href="http://porto.lupy.my.id">
+                  <img
+                    src="assets/X PPLG Portofolio Landing Page.png"
+                    alt="PPLG landing page."
+                  />
+                </a>
+                <div class="project-text">
+                  <p>
+                    In this landing page, I designed the grid layout of the
+                    names, previously using Flex.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="project-card">
-              <a href="https://github.com/Klrfl/Sebastian-Sidebar" target="_blank">
-                <img src="assets/Sebastian Sidebar.png" alt="Sebsatian Sidebar screenshot.">
-              </a>
-              <div class="project-text"><p>This is an improved version of my previous static site, Sebastian.</p></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="project-card">
-              <a href="https://github.com/Klrfl/suwit-jawa" target="_blank">
-                <img src="assets/Suwit Jawa by Klrfl.png" alt="my suwit jawa project screenshot.">
-              </a>
-              <div class="project-text"><p>This is a Suwit Jawa game made by me, made with JS.</p></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="project-card">
-              <a href="http://porto.lupy.my.id">
-                <img src="assets/X PPLG Portofolio Landing Page.png" alt="PPLG landing page.">
-              </a>
-              <div class="project-text"><p>In this landing page, I designed the grid layout of the names, previously using Flex.</p></div>
-            </div>
-          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-      <div class="contact-divider">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-        </svg>
-      </div>
-    </section>
+        <div class="contact-divider">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </section>
 
-    <section class="main-section contact-section" id="contact">
-      <div class="contact__text">
-       <h2>Contact</h2>
-       <p>I am learning PHP and form validation. The contact <span class="contacttt">form </span> should display your</p>
-       <ul>
-        <li>Name,</li>
-        <li>last name, and</li>
-        <li>email</li>
-       </ul>
-       <p>right back at you.</p>
-     </div>
-      <div class="form-container">
-        <form action="index.php" method="POST">
-          <label for="firstname">First name</label>
-          <input id="firstname" type="text" name="firstname" placeholder="John">
-  
-          <label for="lastname">Last name</label>
-          <input id="lastname" type="text" name="lastname" placeholder="Smith">
-  
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="email@example.com">
-          <input type="submit" name="submit" id="submit">
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-text">
-      <p>Made by Klrfl, 2022.</p>
-    </div>
-    <div class="footer-socials">
-      <a href="https://github.com/Klrfl" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
-      <a href="https://github.com/Klrfl" target="_blank"><i class="fa-brands fa-codepen"></i> Codepen</a>
-      <a href="mailto:efrayanglain@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
-    </div>
-  </footer>
+      <section class="main-section contact-section" id="contact">
+        <div class="contact__text">
+          <h2>Contact</h2>
+          <p>
+            I am learning PHP and form validation. The contact
+            <span class="contacttt">form </span> should display your
+          </p>
+          <ul>
+            <li>Name,</li>
+            <li>last name, and</li>
+            <li>email</li>
+          </ul>
+          <p>right back at you.</p>
+        </div>
+        <div class="form-container">
+          <form action="index.php" method="POST">
+            <label for="firstname">First name</label>
+            <input
+              id="firstname"
+              type="text"
+              name="firstname"
+              placeholder="John"
+            />
 
-  <!-- js and fontawesome link -->
-  <script src="js/script.js"></script>
-  <script src="https://kit.fontawesome.com/12334b3056.js" crossorigin="anonymous"></script>
-</body>
+            <label for="lastname">Last name</label>
+            <input
+              id="lastname"
+              type="text"
+              name="lastname"
+              placeholder="Smith"
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@example.com"
+            />
+            <input type="submit" name="submit" id="submit" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-text">
+        <p>Made by Klrfl, 2022.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Klrfl" target="_blank"
+          ><i class="fa-brands fa-github"></i> Github</a
+        >
+        <a href="https://github.com/Klrfl" target="_blank"
+          ><i class="fa-brands fa-codepen"></i> Codepen</a
+        >
+        <a href="mailto:efrayanglain@gmail.com"
+          ><i class="fa-solid fa-envelope"></i> Email me</a
+        >
+      </div>
+    </footer>
+
+    <!-- js and fontawesome link -->
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/12334b3056.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
