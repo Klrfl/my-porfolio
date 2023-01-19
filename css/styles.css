@@ -322,6 +322,10 @@ nav a:focus::before {
   transform: translateY(0);
 }
 
+.about__text {
+  max-width: 75ch;
+}
+
 .about-divider {
   position: absolute;
   bottom: 0;
