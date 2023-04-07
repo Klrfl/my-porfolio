@@ -1,0 +1,31 @@
+section.main-section.contact-section#contact
+  div.contact__text
+    h2 Contact
+    p This contact form is currently not operational lol.
+
+  div.form-container
+    form(action="index.php" method="POST")
+      label(for="firstname") First name
+      input(
+        id="firstname"
+        type="text"
+        name="firstname"
+        placeholder="John"
+      )
+        
+      label(for="lastname") Last name
+      input(
+        id="lastname"
+        type="text"
+        name="lastname"
+        placeholder="Smith"
+      )
+      
+      label(for="email") Email
+      input(
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email@example.com"
+      )
+      <input type="submit" name="submit" id="submit" />
