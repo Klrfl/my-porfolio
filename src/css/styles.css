@@ -312,7 +312,6 @@ nav a:focus::before {
   display: block;
   width: calc(100% + 1.3px);
   height: 69px;
-  transform: rotateY(180deg);
 }
 
 .about-divider .shape-fill {
