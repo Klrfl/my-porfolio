@@ -210,14 +210,14 @@ nav a:focus::before {
 
 .hero__text h1::before {
   background: #2d2d3f;
-  animation: typing 4s steps(18) 1000ms forwards;
+  animation: typing 3s steps(18) 1000ms forwards;
 }
 
 .hero__text h1::after {
   background: white;
   width: 0.2rem;
   top: -5px;
-  animation: typing 4s steps(18) 1000ms forwards, blink 1000ms infinite;
+  animation: typing 3s steps(18) 1000ms forwards, blink 1000ms infinite;
 }
 
 @keyframes typing {
@@ -254,39 +254,31 @@ nav a:focus::before {
 .skills__cards-container {
   text-align: center;
   align-self: stretch;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1em;
+
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr)); */
 }
 
 .skill-card {
+  font-size: 1.2em;
   border-radius: 0.5em;
-  outline: 1px solid #aaa;
-  padding: 40% 2em;
-  aspect-ratio: 1/1;
+  outline: 1px solid #444;
+  padding: 1em;
   overflow: hidden;
   user-select: none;
 
-  transition: transform var(--transition);
+  transition: transform var(--transition), outline var(--transition);
 
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 1 20ch;
   position: relative;
-  cursor: pointer;
-}
-
-.skill-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  transform: translateY(100%);
-  transition: background-color var(--transition);
-}
-
-.skill-text {
-  transition: opacity 200ms ease;
-  font-size: 1.2em;
 }
 
 .skill-text > i {
@@ -294,42 +286,9 @@ nav a:focus::before {
   margin-bottom: 0.5em;
 }
 
-.skill-card__desc {
-  font-size: 0.9rem;
-  text-align: left;
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  color: #ddd;
-
-  transform: translateY(100%);
-  transition: transform var(--transition);
-
-  display: grid;
-  place-items: center;
-}
-
-.skill-card ul {
-  padding: 1em;
-  list-style: none;
-  text-align: center;
-}
-
 .skill-card:hover {
   transform: scale(105%);
-}
-
-.skill-card:hover .skill-text {
-  opacity: 0;
-}
-
-.skill-card:hover .skill-card__desc {
-  transform: translateY(0);
-}
-
-.skill-card:hover::after {
-  background: inherit;
-  transform: translateY(0);
+  outline: 1px solid #aaa;
 }
 
 .about__text {
