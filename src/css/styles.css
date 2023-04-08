@@ -190,6 +190,10 @@ nav a:focus::before {
   padding-inline: 1em;
   z-index: 1;
   flex: 1 1 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero__text h1 {
@@ -197,7 +201,7 @@ nav a:focus::before {
   color: #ddd;
   width: max-content;
   height: 2rem;
-  margin: 1em auto;
+  margin: 0.1em auto;
   position: relative;
   overflow: hidden;
 }
@@ -496,6 +500,7 @@ footer {
   .hero__text {
     padding: 10em 10em 10em 5em;
     text-align: left;
+    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
