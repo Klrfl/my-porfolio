@@ -1,13 +1,16 @@
 nav
-  div.logo
+  .logo
     a(href="#")
       i.fa-solid.fa-k
       
+  button(title="open sidebar").nav-btn#sidebar-open
+    i.fa-solid.fa-bars
+  
   .navlinks-container#sidebar 
     button(title="close sidebar").nav-btn#sidebar-close
+      i.fa-regular.fa-circle-xmark
+
     a(href="#skills").navlinks Skills
     a(href="#about").navlinks About
     a(href="#projects").navlinks Projects
     a(href="#contact").navlinks Contact
-
-  button.nav-btn#sidebar-open
