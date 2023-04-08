@@ -196,8 +196,10 @@ nav a:focus::before {
   font-size: min(2rem, 8vmin);
   color: #ddd;
   width: max-content;
+  height: 2rem;
   margin: 1em auto;
   position: relative;
+  overflow: hidden;
 }
 
 .hero__text h1::before,
@@ -205,7 +207,7 @@ nav a:focus::before {
   content: "";
   position: absolute;
   inset: 0;
-  height: 2rem;
+  height: calc(min(2rem, 8vmin) + 2px);
 }
 
 .hero__text h1::before {
@@ -250,6 +252,9 @@ nav a:focus::before {
 }
 
 /* skills section */
+.skills-section {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
+}
 
 .skills__cards-container {
   text-align: center;
