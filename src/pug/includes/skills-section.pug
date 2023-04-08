@@ -20,10 +20,10 @@ section.main-section.skills-section#skills
       },
       {
         iconClass: "fa-brands fa-js",
-        skillname: "JS",
+        skillname: "JavaScript",
       },
       {
-        iconClass: "fa-brands fa-vue",
+        iconClass: "fa-brands fa-vuejs",
         skillname: "Vue",
       },
       {
@@ -34,6 +34,10 @@ section.main-section.skills-section#skills
         iconClass: "fa-brands fa-github",
         skillname: "Github",
       },
+      {
+        iconClass: "fa-brands fa-python",
+        skillname: "Python",
+      },
     ];
   
   //- put each statement near the js
@@ -42,10 +46,10 @@ section.main-section.skills-section#skills
     each skill in skillset
       .skill-card
         span.skill-text
-        //- we can't use the dot notation
-        //- we do this so pug doesn't think we're assigning 2 classes, "skill" and "iconClass"
-        i(class=skill.iconClass)
-        = skill.skillname 
+          //- we can't use the dot notation
+          //- we do this so pug doesn't think we're assigning 2 classes, "skill" and "iconClass"
+          i(class=skill.iconClass)
+          = skill.skillname
 
   .about-divider 
     svg(data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none")
