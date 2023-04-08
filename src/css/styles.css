@@ -492,12 +492,18 @@ footer {
   color: #ddd;
 }
 
+.footer-socials i {
+  margin-inline-end: 0.5em;
+}
+
 /* media query */
 @media screen and (min-width: 50em) {
   body.active {
     overflow: auto;
   }
+
   .navlinks-container {
+    visibility: visible;
     position: relative;
     flex-direction: row;
     height: min-content;
