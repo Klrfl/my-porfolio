@@ -268,7 +268,9 @@ nav a:focus::before {
   font-size: 1.2em;
   border-radius: 0.5em;
   outline: 1px solid #444;
-  padding: 1em;
+  padding-block: 2rem;
+  padding-inline: 4rem;
+  max-width: 20ch;
   overflow: hidden;
   user-select: none;
 
@@ -277,7 +279,7 @@ nav a:focus::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 1 20ch;
+  flex: 1 1 0;
   position: relative;
 }
 
