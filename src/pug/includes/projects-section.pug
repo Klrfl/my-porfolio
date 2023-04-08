@@ -1,0 +1,42 @@
+section.main-section#projects
+  .projects__text
+    h2 Projects i've worked on
+    p These are some of the projects I ahve worked on in the past.
+
+  -
+    const projects = [
+      {
+        projectLink: "https://github.com/Klrfl/Sebastian",
+        projectImage: "./src/assets/Sebastian.png",
+        projectHeading: "Sebastian",
+        projectText: "This is my first ever static site, made when I barely knew anything about CSS.",
+      },
+      {
+        projectLink: "https://github.com/Klrfl/Sebastian-Sidebar",
+        projectImage: "./src/assets/Sebastian Sidebar.png",
+        projectHeading: "Sebastian Sidebar",
+        projectText: "This is an improved version of my first static site. Looks quite similar.",
+      },
+      {
+        projectLink: "https://github.com/Klrfl/suwit-jawa",
+        projectImage: "./src/assets/Suwit Jawa by Klrfl.png",
+        projectHeading: "Suwit Jawa in JS",
+        projectText: "Suwit Jawa game I made in JS.",
+      },
+      {
+        projectLink: "https://porto.lupy.my.id",
+        projectImage: "./src/assets/X PPLG Portofolio Landing Page.png",
+        projectHeading: "PPLG Portfolio landing page.",
+        projectText: "I designed the grid layout of this landing page.",
+      }
+    ]
+  .projects-container
+    
+    each project in projects
+      //- cards
+      .project-card
+        a(href=project.projectLink) 
+          img(src=project.projectImage)
+        .project-text
+          h2= project.projectHeading
+          p= project.projectText

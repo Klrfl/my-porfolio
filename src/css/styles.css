@@ -277,7 +277,7 @@ nav a:focus::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 20ch;
+  flex: 0 1 20ch;
   position: relative;
 }
 
@@ -348,7 +348,7 @@ nav a:focus::before {
 
 .project-card {
   border-radius: 0.5em;
-  width: inherit;
+  /* width: inherit; */
   user-select: none;
   cursor: pointer;
   overflow: hidden;
@@ -358,18 +358,19 @@ nav a:focus::before {
   flex-direction: column;
 }
 
+.project-card + .project-card {
+  margin-block-start: 1rem;
+}
+
 .project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.project-text {
-  background: #444;
-}
 
-.project-card p {
-  text-align: center;
-  padding: 1em 2em;
+.project-text {
+  padding: 1rem;
+  background: #444;
 }
 
 /* contact section */
