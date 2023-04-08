@@ -9,29 +9,24 @@ html(lang="en")
     //- css link
     link(rel="stylesheet" href="./src/css/styles.css")
     title Efraim's Portfolio :)
+
   body
-
-    nav
-      div.logo
-        a(href="#")
-          i.fa-solid.fa-k
-      
-      .navlinks-container#sidebar 
-        button(title="close sidebar").nav-btn#sidebar-close
-        a(href="#skills").navlinks Skills
-        a(href="#about").navlinks About
-        a(href="#projects").navlinks Projects
-        a(href="#contact").navlinks Contact
-
-      button.nav-btn#sidebar-open
-
+    include includes/navbar.pug
+    
     main 
+      section.hero
+        .hero__text
+          h1 Hello, I'm Efraim.
+          p I like making web experiences full of joy and meaning, or something idk lmao.
+        .hero__image
+
       include includes/skills-section.pug 
       include includes/about-section.pug 
       include includes/projects-section.pug 
       include includes/contact-section.pug 
 
     include includes/footer.pug
+    
     //- js and fontawesome link
     script(src="./src/js/script.js")
     script(src="https://kit.fontawesome.com/12334b3056.js" crossorigin="anonymous")
