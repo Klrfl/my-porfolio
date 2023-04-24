@@ -1,9 +1,9 @@
 // sidebar
-let body = document.body;
-let sidebar = document.getElementById("sidebar");
-let sidebarOpen = document.getElementById("sidebar-open");
-let sidebarClose = document.getElementById("sidebar-close");
-let sidebarLinks = document.querySelectorAll(".navlinks");
+const body = document.body;
+const sidebar = document.getElementById("sidebar");
+const sidebarOpen = document.getElementById("sidebar-open");
+const sidebarClose = document.getElementById("sidebar-close");
+const sidebarLinks = document.querySelectorAll(".navlinks");
 
 sidebarOpen.addEventListener("click", () => {
   sidebar.classList.toggle("active");
@@ -21,25 +21,52 @@ for (let i = 0; i < sidebarLinks.length; i++) {
   });
 }
 
-//slides init
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   direction: "horizontal",
-//   loop: true,
+//slide code
+const slidePreviousBtn = document.getElementById("previous");
+const slideNextBtn = document.getElementById("next");
+const slides = document.querySelectorAll(".slide");
 
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
+const dots = document.querySelectorAll(".dot");
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
+let currentSlide = 1;
 
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-// });
+slidePreviousBtn.addEventListener("click", () => {
+  currentSlide--;
+  moveSlide();
+});
+
+slideNextBtn.addEventListener("click", () => {
+  currentSlide++;
+  moveSlide();
+});
+
+dots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    currentSlide = dot.dataset.slide;
+    moveSlide();
+  });
+});
+
+function pagination() {
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+
+    if (currentSlide == dot.dataset.slide) {
+      dot.classList.add("active");
+    }
+  });
+}
+
+function moveSlide() {
+  if (currentSlide > slides.length) {
+    currentSlide = 1;
+  } else if (currentSlide < 1) {
+    currentSlide = slides.length;
+  }
+
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${currentSlide * 100 - 100}%)`;
+  });
+
+  pagination();
+}

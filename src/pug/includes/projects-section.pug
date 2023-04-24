@@ -34,16 +34,28 @@ section.main-section#projects
         alt: "PPLG Portfolio collection landing page",
       }
     ]
-  .projects-container
+  .projects-slider-container
+    .slide-container
+      each project in projects
+        //- cards
+        .slide
+          .project-card
+            a(href=project.projectLink) 
+              img(src=project.projectImage alt=project.alt)
+            .project-text
+              h3= project.projectHeading
+              p= project.projectText
     
-    each project in projects
-      //- cards
-      .project-card
-        a(href=project.projectLink) 
-          img(src=project.projectImage alt=project.alt)
-        .project-text
-          h3= project.projectHeading
-          p= project.projectText
+    .dots-container
+      each project, index in projects 
+        if (index == 0)
+          .dot(data-slide=index + 1).active 
+        else 
+          .dot(data-slide=index + 1)
+    
+    .slide-button-container
+      button.slide-button#previous <
+      button.slide-button#next >
   
   div.contact-divider
     svg(data-name="Layer 1"

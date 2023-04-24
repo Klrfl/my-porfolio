@@ -8,6 +8,7 @@
   --transblack: rgb(0, 0, 0, 0.5);
   --blur: blur(2rem);
   --about-bg: #bf170b;
+  --light-blue: #267ee6;
 }
 
 /* resets */
@@ -337,28 +338,24 @@ nav a:focus::before {
   flex-direction: column;
 }
 
-.swiper {
-  /* outline: 1px solid red; */
-  padding: 0.5em;
+.projects-slider-container {
   width: 100%;
-  height: min-content;
+  max-width: 100ch;
+  margin: auto;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  background: rgb(0, 0, 0, 0.8);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+.slide-container {
+  display: flex;
+  overflow: hidden;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  color: #ddd;
+.slide {
+  min-width: 100%;
+  transition: transform 200ms ease;
 }
 
 .project-card {
   border-radius: 0.5em;
-  /* width: inherit; */
   user-select: none;
   cursor: pointer;
   overflow: hidden;
@@ -383,9 +380,46 @@ nav a:focus::before {
   background: #444;
 }
 
+.dots-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dot {
+  background: #333;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+
+.dot:hover {
+  cursor: pointer;
+  background: #444;
+}
+
+.dot.active {
+  background: var(--light-blue);
+}
+
+.slide-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-button {
+  padding: 1rem;
+}
+
+.slide-button:hover {
+  background: #444;
+  cursor: pointer;
+}
+
 /* contact section */
 .contact-section {
-  background: #267ee6;
+  background: var(--light-blue);
 }
 
 .contacttt::after {
