@@ -92,7 +92,7 @@ nav {
   inset: 0;
   z-index: 1;
   transform: translateX(100%);
-  transition: transform var(--transition);
+  transition: transform var(--transition), visibility var(--transition);
 
   display: flex;
   flex-direction: column;
@@ -420,10 +420,6 @@ nav a:focus::before {
 /* contact section */
 .contact-section {
   background: var(--light-blue);
-}
-
-.contacttt::after {
-  content: "below";
 }
 
 .form-container {
