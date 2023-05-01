@@ -15,11 +15,9 @@ sidebarClose.addEventListener("click", () => {
   body.classList.toggle("active");
 });
 
-for (let i = 0; i < sidebarLinks.length; i++) {
-  sidebar.addEventListener("click", () => {
-    sidebar.classList.remove("active");
-  });
-}
+sidebar.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
 
 //slide code
 const slidePreviousBtn = document.getElementById("previous");
